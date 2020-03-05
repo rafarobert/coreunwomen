@@ -1,0 +1,101 @@
+<?php
+$this->id='bjlLWDFaNmlpSm5kMll2YzQ1cDYzcGJmcDVHbzJadw______';
+$this->width=600;
+$this->title='';
+$this->fields = unserialize( 'a:5:{s:24:"BROWSER_TIME_ZONE_OFFSET";O:18:"XmlFormFieldHidden":36:{s:13:"sqlConnection";i:0;s:3:"sql";s:0:"";s:9:"sqlOption";a:0:{}s:15:"dependentFields";s:0:"";s:13:"gridFieldType";s:6:"hidden";s:4:"name";s:24:"BROWSER_TIME_ZONE_OFFSET";s:4:"type";s:6:"hidden";s:5:"label";N;s:7:"pmLabel";N;s:5:"owner";N;s:8:"language";s:2:"en";s:5:"group";i:0;s:4:"mode";s:4:"edit";s:12:"defaultValue";N;s:9:"gridLabel";s:0:"";s:4:"hint";s:0:"";s:10:"enableHtml";b:0;s:5:"style";s:0:"";s:12:"withoutLabel";b:0;s:9:"className";s:0:"";s:8:"colWidth";i:140;s:8:"colAlign";s:4:"left";s:12:"colClassName";s:0:"";s:10:"titleAlign";s:0:"";s:5:"align";s:0:"";s:11:"showInTable";s:0:"";s:7:"onclick";s:0:"";s:16:"dataCompareField";s:0:"";s:15:"dataCompareType";s:1:"=";s:7:"pmtable";s:0:"";s:4:"keys";s:0:"";s:12:"pmconnection";s:0:"";s:7:"pmfield";s:0:"";s:8:"modeGrid";s:0:"";s:11:"modeForGrid";s:4:"edit";s:7:"options";a:0:{}}s:13:"USR_TIME_ZONE";O:18:"XmlFormFieldHidden":36:{s:13:"sqlConnection";i:0;s:3:"sql";s:0:"";s:9:"sqlOption";a:0:{}s:15:"dependentFields";s:0:"";s:13:"gridFieldType";s:6:"hidden";s:4:"name";s:13:"USR_TIME_ZONE";s:4:"type";s:6:"hidden";s:5:"label";N;s:7:"pmLabel";N;s:5:"owner";N;s:8:"language";s:2:"en";s:5:"group";i:0;s:4:"mode";s:4:"edit";s:12:"defaultValue";N;s:9:"gridLabel";s:0:"";s:4:"hint";s:0:"";s:10:"enableHtml";b:0;s:5:"style";s:0:"";s:12:"withoutLabel";b:0;s:9:"className";s:0:"";s:8:"colWidth";i:140;s:8:"colAlign";s:4:"left";s:12:"colClassName";s:0:"";s:10:"titleAlign";s:0:"";s:5:"align";s:0:"";s:11:"showInTable";s:0:"";s:7:"onclick";s:0:"";s:16:"dataCompareField";s:0:"";s:15:"dataCompareType";s:1:"=";s:7:"pmtable";s:0:"";s:4:"keys";s:0:"";s:12:"pmconnection";s:0:"";s:7:"pmfield";s:0:"";s:8:"modeGrid";s:0:"";s:11:"modeForGrid";s:4:"edit";s:7:"options";a:0:{}}s:17:"BROWSER_TIME_ZONE";O:20:"XmlFormFieldDropdown":44:{s:12:"defaultValue";s:0:"";s:8:"required";b:0;s:15:"dependentFields";s:0:"";s:8:"readonly";b:0;s:8:"optgroup";i:0;s:6:"option";a:0:{}s:13:"sqlConnection";s:7:"dbarray";s:3:"sql";s:65:"SELECT TZ_UID, TZ_NAME
+        FROM   TIME_ZONE
+        
+        ";s:9:"sqlOption";a:0:{}s:9:"saveLabel";i:0;s:12:"modeGridDrop";s:0:"";s:10:"renderMode";s:0:"";s:13:"selectedValue";s:0:"";s:4:"name";s:17:"BROWSER_TIME_ZONE";s:4:"type";s:8:"dropdown";s:5:"label";s:0:"";s:7:"pmLabel";s:0:"";s:5:"owner";N;s:8:"language";s:2:"en";s:5:"group";i:0;s:4:"mode";s:4:"edit";s:13:"gridFieldType";s:0:"";s:9:"gridLabel";s:0:"";s:4:"hint";s:0:"";s:10:"enableHtml";b:0;s:5:"style";s:0:"";s:12:"withoutLabel";b:0;s:9:"className";s:0:"";s:8:"colWidth";i:140;s:8:"colAlign";s:4:"left";s:12:"colClassName";s:0:"";s:10:"titleAlign";s:0:"";s:5:"align";s:0:"";s:11:"showInTable";s:0:"";s:7:"onclick";s:0:"";s:16:"dataCompareField";s:0:"";s:15:"dataCompareType";s:1:"=";s:7:"pmtable";s:0:"";s:4:"keys";s:0:"";s:12:"pmconnection";s:0:"";s:7:"pmfield";s:0:"";s:8:"modeGrid";s:0:"";s:11:"modeForGrid";s:4:"edit";s:7:"options";a:0:{}}s:5:"BTNOK";O:18:"XmlFormFieldSubmit":34:{s:7:"onclick";s:0:"";s:4:"name";s:5:"BTNOK";s:4:"type";s:6:"submit";s:5:"label";s:0:"";s:7:"pmLabel";s:0:"";s:5:"owner";N;s:8:"language";s:2:"en";s:5:"group";i:0;s:4:"mode";s:4:"edit";s:12:"defaultValue";N;s:13:"gridFieldType";s:0:"";s:9:"gridLabel";s:0:"";s:4:"hint";s:0:"";s:10:"enableHtml";b:0;s:5:"style";s:0:"";s:12:"withoutLabel";b:0;s:9:"className";s:0:"";s:8:"colWidth";i:140;s:8:"colAlign";s:4:"left";s:12:"colClassName";s:0:"";s:10:"titleAlign";s:0:"";s:5:"align";s:0:"";s:11:"showInTable";s:0:"";s:16:"dataCompareField";s:0:"";s:15:"dataCompareType";s:1:"=";s:3:"sql";s:0:"";s:13:"sqlConnection";s:0:"";s:7:"pmtable";s:0:"";s:4:"keys";s:0:"";s:12:"pmconnection";s:0:"";s:7:"pmfield";s:0:"";s:8:"modeGrid";s:0:"";s:11:"modeForGrid";s:4:"edit";s:7:"options";a:0:{}}s:2:"JS";O:22:"XmlFormFieldJavaScript":35:{s:4:"code";s:1036:"
+        
+        window.onload= function ()
+        {
+            document.getElementById("form[BROWSER_TIME_ZONE_OFFSET]").value = getBrowserTimeZoneOffset();
+
+            var strHtml = document.getElementById("details").innerHTML;
+            strHtml = stringReplace("\\\\{0\\\\}", document.getElementById("form[USR_TIME_ZONE]").value, strHtml);
+            strHtml = stringReplace("\\\\{1\\\\}.", "", strHtml);
+            strHtml = stringReplace("\\\\{1\\\\}", "", strHtml);
+
+            document.getElementById("details").innerHTML = strHtml;
+
+            document.getElementById("form[BTNOK]").value = _("ID_OK");
+
+            if (document.getElementById("form[BTNOK]").classList == undefined) {
+                document.getElementById("form[BTNOK]").className = "button-login-success";
+            } else {
+                document.getElementById("form[BTNOK]").classList.remove("module_app_button___gray");
+                document.getElementById("form[BTNOK]").classList.add("button-login-success");
+            }
+        };
+        
+    ";s:11:"replaceTags";b:1;s:4:"name";s:2:"JS";s:4:"type";s:10:"javascript";s:5:"label";s:0:"";s:7:"pmLabel";s:0:"";s:5:"owner";N;s:8:"language";s:2:"en";s:5:"group";i:0;s:4:"mode";s:0:"";s:12:"defaultValue";N;s:13:"gridFieldType";s:0:"";s:9:"gridLabel";s:0:"";s:4:"hint";s:0:"";s:10:"enableHtml";b:0;s:5:"style";s:0:"";s:12:"withoutLabel";b:0;s:9:"className";s:0:"";s:8:"colWidth";i:140;s:8:"colAlign";s:4:"left";s:12:"colClassName";s:0:"";s:10:"titleAlign";s:0:"";s:5:"align";s:0:"";s:11:"showInTable";s:0:"";s:7:"onclick";s:0:"";s:16:"dataCompareField";s:0:"";s:15:"dataCompareType";s:1:"=";s:3:"sql";s:0:"";s:13:"sqlConnection";s:0:"";s:7:"pmtable";s:0:"";s:4:"keys";s:0:"";s:12:"pmconnection";s:0:"";s:7:"pmfield";s:0:"";s:8:"modeGrid";s:0:"";s:11:"modeForGrid";s:0:"";}}' );
+$this->values = unserialize( 'a:0:{}' );
+$this->action='';
+$this->ajaxServer='';
+$this->enableTemplate='1';
+$this->ajaxSubmit=false;
+$this->callback='function(){}';
+$this->in_progress='function(){}';
+$this->template=null;
+$this->className='formDefault';
+$this->objectRequiredFields='[]';
+$this->nextstepsave='';
+$this->printdynaform='';
+$this->adjustgridswidth='0';
+$this->visual_frontend=null;
+$this->tree = unserialize( 'O:8:"Xml_Node":5:{s:4:"name";s:8:"dynaForm";s:4:"type";s:4:"open";s:5:"value";s:5:"
+    ";s:10:"attributes";a:3:{s:4:"type";s:7:"xmlform";s:4:"name";s:19:"login/TimeZoneAlert";s:14:"enabletemplate";s:1:"1";}s:8:"children";a:10:{i:0;O:8:"Xml_Node":5:{s:4:"name";s:24:"BROWSER_TIME_ZONE_OFFSET";s:4:"type";s:8:"complete";s:5:"value";s:0:"";s:10:"attributes";a:1:{s:4:"type";s:6:"hidden";}s:8:"children";a:0:{}}i:1;O:8:"Xml_Node":5:{s:4:"name";s:0:"";s:4:"type";s:5:"cdata";s:5:"value";s:6:"
+
+    ";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}i:2;O:8:"Xml_Node":5:{s:4:"name";s:13:"USR_TIME_ZONE";s:4:"type";s:8:"complete";s:5:"value";s:0:"";s:10:"attributes";a:1:{s:4:"type";s:6:"hidden";}s:8:"children";a:0:{}}i:3;O:8:"Xml_Node":5:{s:4:"name";s:0:"";s:4:"type";s:5:"cdata";s:5:"value";s:6:"
+
+    ";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}i:4;O:8:"Xml_Node":5:{s:4:"name";s:17:"BROWSER_TIME_ZONE";s:4:"type";s:4:"open";s:5:"value";s:83:"
+        
+        SELECT TZ_UID, TZ_NAME
+        FROM   TIME_ZONE
+        
+        ";s:10:"attributes";a:2:{s:4:"type";s:8:"dropdown";s:13:"sqlconnection";s:7:"dbarray";}s:8:"children";a:2:{i:0;O:8:"Xml_Node":5:{s:4:"name";s:2:"en";s:4:"type";s:8:"complete";s:5:"value";s:0:"";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}i:1;O:8:"Xml_Node":5:{s:4:"name";s:0:"";s:4:"type";s:5:"cdata";s:5:"value";s:5:"
+    ";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}}}i:5;O:8:"Xml_Node":5:{s:4:"name";s:0:"";s:4:"type";s:5:"cdata";s:5:"value";s:6:"
+
+    ";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}i:6;O:8:"Xml_Node":5:{s:4:"name";s:5:"BTNOK";s:4:"type";s:4:"open";s:5:"value";s:9:"
+        ";s:10:"attributes";a:1:{s:4:"type";s:6:"submit";}s:8:"children";a:2:{i:0;O:8:"Xml_Node":5:{s:4:"name";s:2:"en";s:4:"type";s:8:"complete";s:5:"value";s:0:"";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}i:1;O:8:"Xml_Node":5:{s:4:"name";s:0:"";s:4:"type";s:5:"cdata";s:5:"value";s:5:"
+    ";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}}}i:7;O:8:"Xml_Node":5:{s:4:"name";s:0:"";s:4:"type";s:5:"cdata";s:5:"value";s:6:"
+
+    ";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}i:8;O:8:"Xml_Node":5:{s:4:"name";s:2:"JS";s:4:"type";s:8:"complete";s:5:"value";s:1036:"
+        
+        window.onload= function ()
+        {
+            document.getElementById("form[BROWSER_TIME_ZONE_OFFSET]").value = getBrowserTimeZoneOffset();
+
+            var strHtml = document.getElementById("details").innerHTML;
+            strHtml = stringReplace("\\\\{0\\\\}", document.getElementById("form[USR_TIME_ZONE]").value, strHtml);
+            strHtml = stringReplace("\\\\{1\\\\}.", "", strHtml);
+            strHtml = stringReplace("\\\\{1\\\\}", "", strHtml);
+
+            document.getElementById("details").innerHTML = strHtml;
+
+            document.getElementById("form[BTNOK]").value = _("ID_OK");
+
+            if (document.getElementById("form[BTNOK]").classList == undefined) {
+                document.getElementById("form[BTNOK]").className = "button-login-success";
+            } else {
+                document.getElementById("form[BTNOK]").classList.remove("module_app_button___gray");
+                document.getElementById("form[BTNOK]").classList.add("button-login-success");
+            }
+        };
+        
+    ";s:10:"attributes";a:1:{s:4:"type";s:10:"javascript";}s:8:"children";a:0:{}}i:9;O:8:"Xml_Node":5:{s:4:"name";s:0:"";s:4:"type";s:5:"cdata";s:5:"value";s:1:"
+";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}}}' );
+$this->name='login_TimeZoneAlert';
+$this->language='en';
+$this->version='0.3';
+$this->type='xmlform';
+$this->sql=null;
+$this->sqlConnection=null;
+$this->height='100%';
+$this->border=1;
+$this->mode='';
+$this->labelWidth='40%';
+$this->onsubmit='';
+$this->requiredFields = unserialize( 'a:0:{}' );
+$this->fieldContentWidth=450;
+?>

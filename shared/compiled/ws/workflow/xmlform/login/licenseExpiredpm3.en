@@ -1,0 +1,83 @@
+<?php
+$this->id='bjlLWDFaNmlvSm5UMlrCsGcybnF4NHByZm1NZWcyV09ockozYw______';
+$this->width='450';
+$this->title='';
+$this->fields = unserialize( 'a:4:{s:8:"thetitle";O:17:"XmlFormFieldTitle":34:{s:4:"name";s:8:"thetitle";s:4:"type";s:5:"title";s:5:"label";s:129:"Your license has expired or the system does not have a license. To use the ProcessMaker Enterprise Edition upload a valid license";s:7:"pmLabel";s:129:"Your license has expired or the system does not have a license. To use the ProcessMaker Enterprise Edition upload a valid license";s:5:"owner";N;s:8:"language";s:2:"en";s:5:"group";i:0;s:4:"mode";s:4:"edit";s:12:"defaultValue";N;s:13:"gridFieldType";s:0:"";s:9:"gridLabel";s:0:"";s:4:"hint";s:0:"";s:10:"enableHtml";b:0;s:5:"style";s:0:"";s:12:"withoutLabel";b:0;s:9:"className";s:0:"";s:8:"colWidth";i:140;s:8:"colAlign";s:4:"left";s:12:"colClassName";s:0:"";s:10:"titleAlign";s:0:"";s:5:"align";s:0:"";s:11:"showInTable";s:0:"";s:7:"onclick";s:0:"";s:16:"dataCompareField";s:0:"";s:15:"dataCompareType";s:1:"=";s:3:"sql";s:0:"";s:13:"sqlConnection";s:0:"";s:7:"pmtable";s:0:"";s:4:"keys";s:0:"";s:12:"pmconnection";s:0:"";s:7:"pmfield";s:0:"";s:8:"modeGrid";s:0:"";s:11:"modeForGrid";s:4:"edit";s:7:"options";a:0:{}}s:11:"licenseFile";O:16:"XmlFormFieldFile":36:{s:8:"required";s:1:"1";s:5:"input";N;s:13:"gridFieldType";s:4:"file";s:4:"name";s:11:"licenseFile";s:4:"type";s:4:"file";s:5:"label";s:12:"License File";s:7:"pmLabel";s:12:"License File";s:5:"owner";N;s:8:"language";s:2:"en";s:5:"group";i:0;s:4:"mode";s:4:"edit";s:12:"defaultValue";N;s:9:"gridLabel";s:0:"";s:4:"hint";s:0:"";s:10:"enableHtml";b:0;s:5:"style";s:0:"";s:12:"withoutLabel";b:0;s:9:"className";s:0:"";s:8:"colWidth";i:140;s:8:"colAlign";s:4:"left";s:12:"colClassName";s:0:"";s:10:"titleAlign";s:0:"";s:5:"align";s:0:"";s:11:"showInTable";s:0:"";s:7:"onclick";s:0:"";s:16:"dataCompareField";s:0:"";s:15:"dataCompareType";s:1:"=";s:3:"sql";s:0:"";s:13:"sqlConnection";s:0:"";s:7:"pmtable";s:0:"";s:4:"keys";s:0:"";s:12:"pmconnection";s:0:"";s:7:"pmfield";s:0:"";s:8:"modeGrid";s:0:"";s:11:"modeForGrid";s:4:"edit";s:7:"options";a:0:{}}s:12:"updateButton";O:18:"XmlFormFieldSubmit":34:{s:7:"onclick";s:0:"";s:4:"name";s:12:"updateButton";s:4:"type";s:6:"submit";s:5:"label";s:14:"Update License";s:7:"pmLabel";s:14:"Update License";s:5:"owner";N;s:8:"language";s:2:"en";s:5:"group";i:0;s:4:"mode";s:4:"edit";s:12:"defaultValue";N;s:13:"gridFieldType";s:0:"";s:9:"gridLabel";s:0:"";s:4:"hint";s:0:"";s:10:"enableHtml";b:0;s:5:"style";s:0:"";s:12:"withoutLabel";b:0;s:9:"className";s:0:"";s:8:"colWidth";i:140;s:8:"colAlign";s:4:"left";s:12:"colClassName";s:0:"";s:10:"titleAlign";s:0:"";s:5:"align";s:0:"";s:11:"showInTable";s:0:"";s:16:"dataCompareField";s:0:"";s:15:"dataCompareType";s:1:"=";s:3:"sql";s:0:"";s:13:"sqlConnection";s:0:"";s:7:"pmtable";s:0:"";s:4:"keys";s:0:"";s:12:"pmconnection";s:0:"";s:7:"pmfield";s:0:"";s:8:"modeGrid";s:0:"";s:11:"modeForGrid";s:4:"edit";s:7:"options";a:0:{}}s:2:"JS";O:22:"XmlFormFieldJavaScript":35:{s:4:"code";s:684:"
+
+function getElementsByClassNameIE8(node, classname) {
+    var a = [];
+    var re = new RegExp(\'(^| )\'+classname+\'( |$)\');
+    var els = node.getElementsByTagName("*");
+    for(var i=0,j=els.length; i<j; i++)
+        if(re.test(els[i].className))a.push(els[i]);
+    return a;
+};
+
+window.onload= function(){
+  if(document.getElementById(\'form[updateButton]\').classList == undefined){
+    document.getElementById(\'form[updateButton]\').className = "button-login-success";         
+  }else{
+    document.getElementById(\'form[updateButton]\').classList.remove(\'module_app_button___gray\');
+    document.getElementById(\'form[updateButton]\').classList.add(\'button-login-success\');  
+  }  
+};
+";s:11:"replaceTags";b:1;s:4:"name";s:2:"JS";s:4:"type";s:10:"javascript";s:5:"label";s:0:"";s:7:"pmLabel";s:0:"";s:5:"owner";N;s:8:"language";s:2:"en";s:5:"group";i:0;s:4:"mode";s:0:"";s:12:"defaultValue";N;s:13:"gridFieldType";s:0:"";s:9:"gridLabel";s:0:"";s:4:"hint";s:0:"";s:10:"enableHtml";b:0;s:5:"style";s:0:"";s:12:"withoutLabel";b:0;s:9:"className";s:0:"";s:8:"colWidth";i:140;s:8:"colAlign";s:4:"left";s:12:"colClassName";s:0:"";s:10:"titleAlign";s:0:"";s:5:"align";s:0:"";s:11:"showInTable";s:0:"";s:7:"onclick";s:0:"";s:16:"dataCompareField";s:0:"";s:15:"dataCompareType";s:1:"=";s:3:"sql";s:0:"";s:13:"sqlConnection";s:0:"";s:7:"pmtable";s:0:"";s:4:"keys";s:0:"";s:12:"pmconnection";s:0:"";s:7:"pmfield";s:0:"";s:8:"modeGrid";s:0:"";s:11:"modeForGrid";s:0:"";}}' );
+$this->values = unserialize( 'a:0:{}' );
+$this->action='';
+$this->ajaxServer='';
+$this->enableTemplate='1';
+$this->ajaxSubmit=false;
+$this->callback='function(){}';
+$this->in_progress='function(){}';
+$this->template=null;
+$this->className='formDefault';
+$this->objectRequiredFields='[{%27name%27:%27thetitle%27,%27type%27:%27title%27,%27label%27:%27Your license has expired or the system does not have a license. To use the ProcessMaker Enterprise Edition upload a valid license%27,%27validate%27:%27%27,%27required%27:%270%27},{%27name%27:%27licenseFile%27,%27type%27:%27file%27,%27label%27:%27License File%27,%27validate%27:%27%27,%27required%27:%271%27},{%27name%27:%27updateButton%27,%27type%27:%27submit%27,%27label%27:%27Update License%27,%27validate%27:%27%27,%27required%27:%270%27}]';
+$this->nextstepsave='';
+$this->printdynaform='';
+$this->adjustgridswidth='0';
+$this->visual_frontend=null;
+$this->tree = unserialize( 'O:8:"Xml_Node":5:{s:4:"name";s:8:"dynaForm";s:4:"type";s:4:"open";s:5:"value";s:3:"
+  ";s:10:"attributes";a:4:{s:4:"type";s:7:"xmlform";s:4:"name";s:20:"login/licenseExpired";s:5:"width";s:3:"450";s:14:"enabletemplate";s:1:"1";}s:8:"children";a:8:{i:0;O:8:"Xml_Node":5:{s:4:"name";s:8:"thetitle";s:4:"type";s:4:"open";s:5:"value";s:5:"
+    ";s:10:"attributes";a:4:{s:4:"type";s:5:"title";s:8:"required";s:1:"0";s:8:"readonly";s:1:"0";s:8:"optgroup";s:1:"0";}s:8:"children";a:2:{i:0;O:8:"Xml_Node":5:{s:4:"name";s:2:"en";s:4:"type";s:8:"complete";s:5:"value";s:129:"Your license has expired or the system does not have a license. To use the ProcessMaker Enterprise Edition upload a valid license";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}i:1;O:8:"Xml_Node":5:{s:4:"name";s:0:"";s:4:"type";s:5:"cdata";s:5:"value";s:3:"
+  ";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}}}i:1;O:8:"Xml_Node":5:{s:4:"name";s:0:"";s:4:"type";s:5:"cdata";s:5:"value";s:3:"
+  ";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}i:2;O:8:"Xml_Node":5:{s:4:"name";s:11:"licenseFile";s:4:"type";s:4:"open";s:5:"value";s:5:"
+    ";s:10:"attributes";a:4:{s:4:"type";s:4:"file";s:8:"required";s:1:"1";s:8:"readonly";s:1:"0";s:8:"optgroup";s:1:"0";}s:8:"children";a:2:{i:0;O:8:"Xml_Node":5:{s:4:"name";s:2:"en";s:4:"type";s:8:"complete";s:5:"value";s:12:"License File";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}i:1;O:8:"Xml_Node":5:{s:4:"name";s:0:"";s:4:"type";s:5:"cdata";s:5:"value";s:3:"
+  ";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}}}i:3;O:8:"Xml_Node":5:{s:4:"name";s:0:"";s:4:"type";s:5:"cdata";s:5:"value";s:3:"
+  ";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}i:4;O:8:"Xml_Node":5:{s:4:"name";s:12:"updateButton";s:4:"type";s:4:"open";s:5:"value";s:5:"
+    ";s:10:"attributes";a:4:{s:4:"type";s:6:"submit";s:8:"required";s:1:"0";s:8:"readonly";s:1:"0";s:8:"optgroup";s:1:"0";}s:8:"children";a:2:{i:0;O:8:"Xml_Node":5:{s:4:"name";s:2:"en";s:4:"type";s:8:"complete";s:5:"value";s:14:"Update License";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}i:1;O:8:"Xml_Node":5:{s:4:"name";s:0:"";s:4:"type";s:5:"cdata";s:5:"value";s:3:"
+  ";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}}}i:5;O:8:"Xml_Node":5:{s:4:"name";s:0:"";s:4:"type";s:5:"cdata";s:5:"value";s:4:"
+   ";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}i:6;O:8:"Xml_Node":5:{s:4:"name";s:2:"JS";s:4:"type";s:8:"complete";s:5:"value";s:684:"
+
+function getElementsByClassNameIE8(node, classname) {
+    var a = [];
+    var re = new RegExp(\'(^| )\'+classname+\'( |$)\');
+    var els = node.getElementsByTagName("*");
+    for(var i=0,j=els.length; i<j; i++)
+        if(re.test(els[i].className))a.push(els[i]);
+    return a;
+};
+
+window.onload= function(){
+  if(document.getElementById(\'form[updateButton]\').classList == undefined){
+    document.getElementById(\'form[updateButton]\').className = "button-login-success";         
+  }else{
+    document.getElementById(\'form[updateButton]\').classList.remove(\'module_app_button___gray\');
+    document.getElementById(\'form[updateButton]\').classList.add(\'button-login-success\');  
+  }  
+};
+";s:10:"attributes";a:1:{s:4:"type";s:10:"javascript";}s:8:"children";a:0:{}}i:7;O:8:"Xml_Node":5:{s:4:"name";s:0:"";s:4:"type";s:5:"cdata";s:5:"value";s:1:"
+";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}}}' );
+$this->name='login_licenseExpired';
+$this->language='en';
+$this->version='0.3';
+$this->type='xmlform';
+$this->sql=null;
+$this->sqlConnection=null;
+$this->height='100%';
+$this->border=1;
+$this->mode='';
+$this->labelWidth='40%';
+$this->onsubmit='';
+$this->requiredFields = unserialize( 'a:3:{i:0;a:5:{s:4:"name";s:8:"thetitle";s:4:"type";s:5:"title";s:5:"label";s:129:"Your license has expired or the system does not have a license. To use the ProcessMaker Enterprise Edition upload a valid license";s:8:"validate";s:0:"";s:8:"required";s:1:"0";}i:1;a:5:{s:4:"name";s:11:"licenseFile";s:4:"type";s:4:"file";s:5:"label";s:12:"License File";s:8:"validate";s:0:"";s:8:"required";s:1:"1";}i:2;a:5:{s:4:"name";s:12:"updateButton";s:4:"type";s:6:"submit";s:5:"label";s:14:"Update License";s:8:"validate";s:0:"";s:8:"required";s:1:"0";}}' );
+$this->fieldContentWidth=450;
+?>

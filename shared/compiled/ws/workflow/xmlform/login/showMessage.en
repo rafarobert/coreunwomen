@@ -1,0 +1,41 @@
+<?php
+$this->id='bjlLWDFaNmlwNWpmNjM3UzZLaWEyWmFicTlDYw______';
+$this->width='520px';
+$this->title='';
+$this->fields = unserialize( 'a:2:{s:5:"TITLE";O:17:"XmlFormFieldTitle":34:{s:4:"name";s:5:"TITLE";s:4:"type";s:5:"title";s:5:"label";s:5:"Error";s:7:"pmLabel";s:5:"Error";s:5:"owner";N;s:8:"language";s:2:"en";s:5:"group";i:0;s:4:"mode";s:4:"edit";s:12:"defaultValue";N;s:13:"gridFieldType";s:0:"";s:9:"gridLabel";s:0:"";s:4:"hint";s:0:"";s:10:"enableHtml";b:0;s:5:"style";s:0:"";s:12:"withoutLabel";b:0;s:9:"className";s:0:"";s:8:"colWidth";i:140;s:8:"colAlign";s:4:"left";s:12:"colClassName";s:0:"";s:10:"titleAlign";s:0:"";s:5:"align";s:0:"";s:11:"showInTable";s:0:"";s:7:"onclick";s:0:"";s:16:"dataCompareField";s:0:"";s:15:"dataCompareType";s:1:"=";s:3:"sql";s:0:"";s:13:"sqlConnection";s:0:"";s:7:"pmtable";s:0:"";s:4:"keys";s:0:"";s:12:"pmconnection";s:0:"";s:7:"pmfield";s:0:"";s:8:"modeGrid";s:0:"";s:11:"modeForGrid";s:4:"edit";s:7:"options";a:0:{}}s:7:"MESSAGE";O:16:"XmlFormFieldText":51:{s:4:"size";i:15;s:9:"maxLength";i:64;s:8:"validate";s:3:"Any";s:4:"mask";s:0:"";s:12:"defaultValue";s:0:"";s:8:"required";b:0;s:15:"dependentFields";s:0:"";s:9:"linkField";s:0:"";s:5:"strTo";s:0:"";s:8:"readOnly";b:0;s:13:"sqlConnection";i:0;s:3:"sql";s:0:"";s:9:"sqlOption";a:0:{}s:13:"gridFieldType";s:4:"text";s:7:"formula";s:0:"";s:8:"function";s:0:"";s:11:"replaceTags";i:0;s:10:"renderMode";s:0:"";s:15:"comma_separator";s:1:".";s:12:"autocomplete";s:2:"on";s:10:"onkeypress";s:0:"";s:4:"name";s:7:"MESSAGE";s:4:"type";s:4:"text";s:5:"label";s:0:"";s:7:"pmLabel";s:0:"";s:5:"owner";N;s:8:"language";s:2:"en";s:5:"group";i:0;s:4:"mode";s:4:"view";s:9:"gridLabel";s:0:"";s:4:"hint";s:0:"";s:10:"enableHtml";s:1:"1";s:5:"style";s:0:"";s:12:"withoutLabel";b:0;s:9:"className";s:0:"";s:8:"colWidth";i:140;s:8:"colAlign";s:4:"left";s:12:"colClassName";s:0:"";s:10:"titleAlign";s:0:"";s:5:"align";s:0:"";s:11:"showInTable";s:0:"";s:7:"onclick";s:0:"";s:16:"dataCompareField";s:0:"";s:15:"dataCompareType";s:1:"=";s:7:"pmtable";s:0:"";s:4:"keys";s:0:"";s:12:"pmconnection";s:0:"";s:7:"pmfield";s:0:"";s:8:"modeGrid";s:0:"";s:11:"modeForGrid";s:4:"view";s:7:"options";a:0:{}}}' );
+$this->values = unserialize( 'a:0:{}' );
+$this->action='';
+$this->ajaxServer='';
+$this->enableTemplate=false;
+$this->ajaxSubmit=false;
+$this->callback='function(){}';
+$this->in_progress='function(){}';
+$this->template=null;
+$this->className='formDefault';
+$this->objectRequiredFields='[]';
+$this->nextstepsave='';
+$this->printdynaform='';
+$this->adjustgridswidth='0';
+$this->visual_frontend=null;
+$this->tree = unserialize( 'O:8:"Xml_Node":5:{s:4:"name";s:8:"dynaForm";s:4:"type";s:4:"open";s:5:"value";s:3:"
+  ";s:10:"attributes";a:6:{s:4:"name";s:11:"showMessage";s:7:"version";s:3:"1.0";s:7:"basedir";s:0:"";s:12:"xmlform_type";s:6:"NORMAL";s:5:"width";s:5:"520px";s:10:"labelwidth";s:1:"0";}s:8:"children";a:4:{i:0;O:8:"Xml_Node":5:{s:4:"name";s:5:"TITLE";s:4:"type";s:4:"open";s:5:"value";s:5:"
+    ";s:10:"attributes";a:1:{s:4:"type";s:5:"title";}s:8:"children";a:2:{i:0;O:8:"Xml_Node":5:{s:4:"name";s:2:"en";s:4:"type";s:8:"complete";s:5:"value";s:5:"Error";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}i:1;O:8:"Xml_Node":5:{s:4:"name";s:0:"";s:4:"type";s:5:"cdata";s:5:"value";s:3:"
+  ";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}}}i:1;O:8:"Xml_Node":5:{s:4:"name";s:0:"";s:4:"type";s:5:"cdata";s:5:"value";s:3:"
+  ";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}i:2;O:8:"Xml_Node":5:{s:4:"name";s:7:"MESSAGE";s:4:"type";s:4:"open";s:5:"value";s:5:"
+    ";s:10:"attributes";a:3:{s:4:"type";s:4:"text";s:10:"enableHtml";s:1:"1";s:4:"mode";s:4:"view";}s:8:"children";a:2:{i:0;O:8:"Xml_Node":5:{s:4:"name";s:2:"en";s:4:"type";s:8:"complete";s:5:"value";s:0:"";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}i:1;O:8:"Xml_Node":5:{s:4:"name";s:0:"";s:4:"type";s:5:"cdata";s:5:"value";s:3:"
+  ";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}}}i:3;O:8:"Xml_Node":5:{s:4:"name";s:0:"";s:4:"type";s:5:"cdata";s:5:"value";s:1:"
+";s:10:"attributes";a:0:{}s:8:"children";a:0:{}}}}' );
+$this->name='showMessage';
+$this->language='en';
+$this->version='1.0';
+$this->type='xmlform';
+$this->sql=null;
+$this->sqlConnection=null;
+$this->height='100%';
+$this->border=1;
+$this->mode='';
+$this->labelWidth='0';
+$this->onsubmit='';
+$this->requiredFields = unserialize( 'a:0:{}' );
+$this->fieldContentWidth=450;
+?>

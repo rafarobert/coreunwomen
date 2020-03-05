@@ -1,0 +1,18 @@
+2020:01:30 14:46:56 -------------------------------------------
+2020:01:30 14:46:56 Creating workspace workflow
+2020:01:30 14:46:57 Connected to server localhost :3306  using user: 'root'
+2020:01:30 14:46:57 GRANT ALL PRIVILEGES ON `wf_workflow_346`.* TO wf_5e32ec61030ab@'localhost' IDENTIFIED BY '0qnh8dHB$YU!40w' WITH GRANT OPTION
+2020:01:30 14:46:57 Creating : /Users/rafaelgutierrezgaspar/Sites/dev/pm346/processmaker/shared//sites/workflow/db.php
+2020:01:30 14:46:57 Creating : /Users/rafaelgutierrezgaspar/Sites/dev/pm346/processmaker/shared//sites/workflow/env.ini
+2020:01:30 14:46:57 Creating : /Users/rafaelgutierrezgaspar/Sites/dev/pm346/processmaker/shared//sites/workflow/databases.php
+2020:01:30 14:46:57 Processing: /Users/rafaelgutierrezgaspar/Sites/dev/pm346/processmaker/rbac/engine/data/mysql/schema.sql
+2020:01:30 14:46:57 File: schema.sql processed in 0.19149589538574 seconds
+2020:01:30 14:46:57 Processing: /Users/rafaelgutierrezgaspar/Sites/dev/pm346/processmaker/rbac/engine/data/mysql/insert.sql
+2020:01:30 14:46:57 File: insert.sql processed in 0.022502899169922 seconds
+2020:01:30 14:46:57 Processing: /Users/rafaelgutierrezgaspar/Sites/dev/pm346/processmaker/workflow/engine/data/mysql/schema.sql
+2020:01:30 14:46:59 File: schema.sql processed in 2.0600891113281 seconds
+2020:01:30 14:46:59 Processing: /Users/rafaelgutierrezgaspar/Sites/dev/pm346/processmaker/workflow/engine/data/mysql/insert.sql
+2020:01:30 14:47:00 File: insert.sql processed in 0.92655992507935 seconds
+2020:01:30 14:47:00 Creating : /Users/rafaelgutierrezgaspar/Sites/dev/pm346/processmaker/workflow/engine/config/paths_installed.php
+2020:01:30 14:47:00 Index File updated 1 with lang: {en}, skin: {neoclassic}
+2020:01:30 14:47:00 Installation completed successfully.

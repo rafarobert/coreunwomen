@@ -1,0 +1,468 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Dashboards</title>
+
+    <link rel="stylesheet" href="/lib/pmdynaform/libs/bootstrap-3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/sb-admin-2.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <link href="/css/gridstack.css" rel="stylesheet">
+    <link href="/css/general.css" rel="stylesheet">
+    <link href="/css/dashboardStylesForIE.css" rel="stylesheet">
+
+    <script type="text/javascript" src="/js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/js/jquery/jquery-ui-1.11.2.min.js" ></script>
+    <script src="/lib/pmdynaform/libs/bootstrap-3.1.1/js/bootstrap.min.js"></script>
+    <script src="/lib/pmdynaform/libs/underscore/underscore-1.8.3.js"></script>
+    <script type="text/javascript" src="/js/gridstack/gridstack.js"></script>
+    <script type="text/javascript" src="/js/d3/d3.js" ></script>
+    <script type="text/javascript" src="/js/d3/d3.tip.js"></script>
+    <script type="text/javascript" src="/js/pmchart/pmCharts.js"></script>
+    <script type="text/javascript" >
+        var urlProxy = '{$urlProxy}';
+        var workspace = '{$SYS_SYS}';
+        var pageUserId = '{$usrId}';
+        var token = '{$credentials.access_token}';
+        var moneyUnit = '{$unitCost}';
+        var G_STRING = [];
+        {foreach from=$translation key=index item=option}
+            G_STRING['{$index}'] = "{$option}";
+        {/foreach}
+    </script>
+
+	<!-- View Dashboard Files-->
+    <script type="text/javascript" src="/jscore/strategicDashboard/viewDashboardHelper.js"></script>
+    <script type="text/javascript" src="/jscore/strategicDashboard/viewDashboardModel.js"></script>
+    <script type="text/javascript" src="/jscore/strategicDashboard/viewDashboardPresenter.js"></script>
+    <script type="text/javascript" src="/jscore/strategicDashboard/viewDashboardView.js"></script>
+
+    <script type="text/javascript" src="/jscore/strategicDashboard/timeSeriesModel.js"></script>
+    <script type="text/javascript" src="/jscore/strategicDashboard/timeSeriesPresenter.js"></script>
+    <script type="text/javascript" src="/jscore/strategicDashboard/timeSeriesView.js"></script>
+
+	<script type="text/template" class="specialIndicatorButtonTemplate">
+		<div class="col-lg-3 col-md-6 dashPro ind-button-selector"
+			 id="indicatorButton-<%- indicator.id %>"
+			 data-indicator-id="<%- indicator.id %>"
+			 data-indicator-type="<%- indicator.type %>"
+			 data-gs-min-width="3" data-gs-min-height="2" data-gs-max-height="2">
+			<div class="ind-container-selector panel panel-green grid-stack-item-content" style="min-width:200px;">
+				<a data-toggle="collapse" href="#efficiencyindex" aria-expanded="false" aria-controls="efficiencyindex">
+					<div class="panel-heading" >
+						<div class="row">
+							<div class="col-xs-3" data-toggle="tooltip" data-original-title="{translate label='ID_DASH_HELP_IND_VALUE'}">
+								<div class="huge ind-value-selector"><%- indicator.value %></div>
+							</div>
+							<div class="col-xs-5">
+								&nbsp;
+							</div>
+							<div class="col-xs-4 text-right">
+								<i style=" width:60px; text-align:center; display:block; float:right;" class="ind-symbol-selector fa fa-arrow-up fa-3x" data-toggle="tooltip" data-original-title="{translate label='ID_DASH_HELP_SYMBOL_SELECTOR'}">
+								</i>
+								<div  class="small ind-comparative-selector" 
+										style="clear:both; width:auto;  text-align:right; float:right;"
+										data-toggle="tooltip" 
+										data-original-title="{translate label='ID_DASH_HELP_IND_COMPARE'}">
+									<%- indicator.comparative %> <%- indicator.percentComparative %>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel-footer text-center ind-title-selector">
+						<div class="ellipsis"><%- indicator.title %></div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/template" class="statusIndicatorButtonTemplate">
+		<div class="col-lg-3 col-md-6 dashPro ind-button-selector"
+			 id="indicatorButton-<%- indicator.id %>"
+			 data-indicator-id="<%- indicator.id %>"
+			 data-indicator-type="<%- indicator.type %>"
+			 data-gs-min-width="3" data-gs-min-height="2" data-gs-max-height="2"
+            data-toggle="tooltip" data-original-title="{translate label='ID_DASH_HELP_INBOX_STATUS'}">
+			<div class="ind-container-selector panel grid-stack-item-content panel-status" style="min-width:200px;">
+				<a data-toggle="collapse" href="#efficiencyindex" aria-expanded="false" aria-controls="efficiencyindex">
+					<div class="panel-heading status-indicator-low"
+						 style=" width:<%- indicator.percentageOverdueWidth %>%;
+						 		visibility: <%- indicator.overdueVisibility %>;overflow:hidden;" >
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="small ind-comparative-selector"><%- indicator.percentageOverdueToShow %></div>
+							</div>
+						</div>
+					</div>
+					<div class="panel-heading status-indicator-medium"
+						 style=" width:<%- indicator.percentageAtRiskWidth %>%;
+						 		visibility: <%- indicator.atRiskVisibility %>;overflow:hidden;" >
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="small ind-comparative-selector"><%- indicator.percentageAtRiskToShow %></div>
+							</div>
+						</div>
+					</div>
+					<div class="panel-heading status-indicator-high"
+						 style=" width:<%- indicator.percentageOnTimeWidth %>%;
+						 		visibility: <%- indicator.onTimeVisibility %>; overflow:hidden;">
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="small ind-comparative-selector"><%- indicator.percentageOnTimeToShow %></div>
+							</div>
+						</div>
+					</div>
+					<div class="panel-footer text-center ind-title-selector" style="clear:both; color:#606368;">
+						<div class="ellipsis"><%- indicator.title %></div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/template" class="indicatorButtonTemplate">
+		<div class="col-lg-3 col-md-6 ind-button-selector" id="generalLowItem"
+					id="indicatorButton-<%- indicator.id %>"
+					data-indicator-id="<%- indicator.id %>"
+					data-indicator-type="<%- indicator.type %>"
+					data-gs-min-width="3" data-gs-min-height="2" data-gs-max-height="2" >
+			<div class="panel ie-panel panel-low grid-stack-item-content ind-container-selector" style="min-width: 200px;">
+				<a data-toggle="collapse" href="#completedcases" aria-expanded="false" aria-controls="completedcases">
+					<div class="panel-heading"> <div class="row"> <div class="col-xs-3">
+								<div class="huge ind-value-selector">X</div>
+							</div>
+							<div class="col-xs-9 text-right"><i class="fa fa-file-text-o fa-3x"></i>
+								<div class="small ind-comparative-selector ellipsis"><%- indicator.comparative %></div>
+							</div>
+						</div>
+					</div>
+					<div class="progress progress-xs progress-dark-base ie-progress-dark-base mar-no">
+						<div role="progressbar"
+							aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+							class="progress-bar progress-bar-light ind-progress-selector"
+							style="width: 0%">
+						</div>
+					</div>
+					<div class="panel-footer text-center ind-title-selector">
+						<div class="ellipsis"><%- indicator.title %></div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/template" class="specialIndicatorMainPanel">
+		<div class="process-div well" id="specialIndicatorMainPanel"
+			data-gs-no-resize="true"
+			style="clear:both;position:relative;height:auto;">
+
+            <div class="panel-heading bluebg sind-title-selector">
+                <ol class="breadcrumb">
+                </ol>
+            </div>
+
+			<div class="text-center huge">
+				<div class="col-xs-3 vcenter">
+					<div class="blue"  data-toggle="tooltip" data-original-title="{translate label='ID_DASH_HELP_IND_EFFICIENCY'}"><%- indicator.efficiencyIndexToShow %></div>
+					<div class="small grey sind-index-selector ellipsis"></div>
+				</div>
+				<div class="col-xs-3 vcenter" style="margin-right:40px" data-toggle="tooltip" data-original-title="{translate label='ID_DASH_HELP_IND_COST'}">
+					<div class="red sind-cost-number-selector">{$unitCost} <%- indicator.inefficiencyCostToShow %></div>
+					<div class="small grey sind-cost-selector ellipsis"></div>
+				</div>
+				<div class="col-xs-6" id="specialIndicatorGraph" style="width:540px;height:300px;">
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</script>
+
+	<script type="text/template" class="specialIndicatorDetail">
+		<div  class="process-div well hideme  detail-button-selector" 
+			data-gs-no-resize="true"
+			style="cursor:pointer;"
+			  id="detailData-<%- detailData.uid %>"
+			  data-indicator-id="<%- detailData.indicatorId %>"
+			  data-detail-id="<%- detailData.uid %>"
+			  data-detail-index="<%- detailData.efficiencyIndexToShow %>"
+			  data-detail-cost-to-show="<%- detailData.inefficiencyCostToShow %>"
+			  data-detail-cost="<%- detailData.inefficiencyCost%>"
+			  data-detail-name="<%- detailData.name %>"
+            >
+			<div class="panel-heading greenbg">
+				<div class="col-xs-11 text-center detail-title-selector">
+					<div class="ellipsis"><%- detailData.name %> </div>
+				 </div>
+				<div class="col-xs-1 text-center detail-title-selector">
+					<i class="fa fa-chevron-right fa-fw"></i> 
+				 </div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="text-center huge">
+				<div class="col-xs-12 vcenter-task">
+					<div class="col-xs-6 " data-toggle="tooltip" data-original-title="{translate label='ID_DASH_HELP_IND_EFFICIENCY'}">
+						<div class="blue small"><%- detailData.efficiencyIndexToShow%></div>
+						<div class="smallB grey detail-efficiency-selector ellipsis"></div>
+					</div>
+					<div class="col-xs-6" data-toggle="tooltip" data-original-title="{translate label='ID_DASH_HELP_IND_COST'}">
+						<div class="small detail-cost-number-selector">{$unitCost}&nbsp;<%- detailData.inefficiencyCostToShow%></div>
+						<div class="smallB grey detail-cost-selector ellipsis"></div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+	</script>
+
+	<script type="text/template" class="specialIndicatorSecondViewDetailUei">
+		<div class="process-div well hideme detail-button-selector-uei" data-gs-no-resize="true"
+			 id="detailData-<%- detailData.uid %>"
+			 data-indicator-id="<%- detailData.indicatorId %>"
+			 data-detail-id="<%- detailData.uid %>">
+			<div class="panel-heading greenbg">
+				<div class="col-xs-12 text-center detail-title-selector ellipsis">
+					<span id="usrName"><%- detailData.name %> </span>
+					(Ranking: <%- detailData.rankToShow %>)
+				 </div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="text-center huge">
+				<div class="col-xs-12 vcenter-task">
+					<div class="col-xs-6" data-toggle="tooltip" data-original-title="{translate label='ID_DASH_HELP_IND_EFFICIENCY'}">
+						<div class="blue small"><%- detailData.efficiencyIndexToShow%></div>
+						<div class="smallB grey detail-efficiency-selector ellipsis"></div>
+					</div>
+					<div class="col-xs-6" data-toggle="tooltip" data-original-title="{translate label='ID_DASH_HELP_IND_COST'}">
+						<div class="small detail-cost-number-selector">{$unitCost}&nbsp;<%- detailData.inefficiencyCostToShow%></div>
+						<div class="smallB grey detail-cost-selector ellipsis"></div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/template" class="specialIndicatorSecondViewDetailPei">
+		<div class="process-div well hideme detail-button-selector-pei" data-gs-no-resize="true"
+			 id="detailData-<%- detailData.uid %>"
+			 data-indicator-id="<%- detailData.indicatorId %>"
+			 data-detail-id="<%- detailData.uid %>">
+			<div class="panel-heading greenbg">
+				<div class="col-xs-12 text-center detail-title-selector ellipsis">
+					<i class="fa fa-tasks fa-fw"></i> 
+					<span id="usrName"><%- detailData.name %> </span>
+				 </div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="text-center huge">
+				<div class="col-xs-12 vcenter-task">
+					<div class="col-xs-6" data-toggle="tooltip" data-original-title="{translate label='ID_DASH_HELP_IND_EFFICIENCY'}">
+						<div class="blue small"><%- detailData.efficiencyIndexToShow%></div>
+						<div class="smallB grey detail-efficiency-selector ellipsis"></div>
+					</div>
+					<div class="col-xs-6" data-toggle="tooltip" data-original-title="{translate label='ID_DASH_HELP_IND_COST'}">
+						<div class="small detail-cost-number-selector">{$unitCost}&nbsp;<%- detailData.inefficiencyCostToShow%></div>
+						<div class="smallB grey detail-cost-selector ellipsis"></div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/template" class="statusDetail">
+		<div class="process-div well hideme detail-button-selector" data-gs-no-resize="true"
+			 id="detailData-<%- detailData.uid %>"
+			 data-indicator-id="<%- detailData.indicatorId %>"
+			 data-detail-id="<%- detailData.uid %>">
+			<div class="panel-heading greenbg">
+				<div class="col-xs-12 text-center detail-title-selector"><i class="fa fa-tasks fa-fw"></i> <span id="usrName"><%- detailData.taskTitle %></span> </div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="text-center huge">
+				<div class="col-xs-12 vcenter-task">
+					<div class="col-xs-4 ">
+						<div  class="blue small"><%- detailData.percentageOverdue%> %</div>
+						<div class="smallB grey fontMedium detail-efficiency-selector">{translate label="ID_OVERDUE"}</div>
+					</div>
+					<div class="col-xs-4">
+						<div  class="blue small"><%- detailData.percentageAtRisk%> %</div>
+						<div class="smallB grey fontMedium detail-efficiency-selector">{translate label="ID_AT_RISK"}</div>
+					</div>
+					<div class="col-xs-4 ">
+						<div  class="blue small"><%- detailData.percentageOnTime%> %</div>
+						<div class="smallB grey fontMedium detail-efficiency-selector">{translate label="ID_ON_TIME"}</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/template" class="dashboardButtonTemplate">
+		<div id="dashboardButton-<%- dashboard.id %>" class="btn-group pull-left"
+			data-dashboard-id="<%- dashboard.id %>" >
+			<button  type="button" class="btn btn-success das-icon-selector">
+				<i class="fa fa-star fa-1x"></i>
+			</button>
+			<button   type="button" class="btn btn-success das-title-selector" >
+				<%- dashboard.title %>
+			</button>
+		</div>
+	</script>
+
+	<script type="text/template" class="generalIndicatorMainPanel">
+        <div class="process-div well" data-gs-no-resize="true" style="clear:both;position:relative;height:auto;">
+            <div class="panel-heading bluebg">
+                <ol class="breadcrumb">
+                    <li class="ind-title-selector"></li>
+                </ol>
+            </div>
+            <div class="text-center huge">
+                <div class="col-xs-6" id="generalGraph1" style="width:600px; height:300px;"><img src="../dist/img/graph.png" /></div>
+                <div class="col-xs-6" id="generalGraph2" style="width:600px; height:300px;margin-left:60px;"><img src="../dist/img/graph.png" /></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </script>
+
+	<script type="text/template" class="statusIndicatorMainPanel">
+		<div class="process-div well" data-gs-no-resize="true" style="clear:both;position:relative;height:auto;">
+			<div class="panel-heading bluebg">
+				<ol class="breadcrumb">
+					<li class="ind-title-selector"></li>
+				</ol>
+			</div>
+			<div class="text-center huge" style="margin:0 auto; width:100%; text-align:center;">
+				<div class="row" style="width:auto; margin:0 auto; display:inline-block;">
+					<div class="col-xs-4" style="width:auto;">
+						<div class="status-graph-title-low">{translate label="ID_OVERDUE"}:</div>
+						<div id="graph1" style="width:380px; height:300px;"></div>	
+					</div>
+					<div class="col-xs-4" style="width:auto;">
+						<div class="status-graph-title-medium">{translate label="ID_AT_RISK"}:</div>
+						<div id="graph2" style="width:380px; height:300px;"></div>	
+					</div>
+					<div class="col-xs-4" style="width:auto;">
+						<div class="status-graph-title-high">{translate label="ID_ON_TIME"}:</div>
+						<div id="graph3" style="width:380px; height:300px;"></div>	
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</script>
+	
+</head>
+	
+
+<body id="page-top" class="index">
+  <img id="scrollImg" class="floating" src="/images/scrolldown.gif" width="80" height="80" style="border-radius:85px; visibility:hidden;"/>
+  <div id="wrapper" style="background:#fff;">
+    <div id="page-wrapper">
+          <!--Cabezera-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                      <div class="panel-body">
+                          <div  class="span4 pull-left">
+							<a class="btn btn-primary dashboard-button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+							<i class="fa fa-bar-chart fa-2x"></i>
+							<i class="fa fa-chevron-down fa-1x"></i>
+							</a>
+                         </div>
+                        <h4 id="titleH4" class="header-dashboard ellipsis" style="max-width:400px;"></h4>
+                        <div class="pull-right dashboard-right container-fluid">
+							<div id="compareIndicators" class="row pull-left">
+								<div class="span4 pull-left" style="margin:15px; ">
+									<span id="indicatorLabel"></span>
+									<select id="indicatorList"></select>
+									<span id="periodicityLabel" style="margin-left:15px;"></span>
+									<select id="periodicityList" style="width:auto;"></select>
+									<span id="initPeriodLabel" style="margin-left:15px;"></span>
+									<select id="initPeriodList"></select>
+									<select id="initYearList"></select>
+									<span id="endPeriodLabel" style="margin-left:15px;"></span>
+									<select id="endPeriodList"></select>
+									<select id="endYearList"></select>
+								</div>
+
+								<div class="span4 pull-left">
+									<button type="button" id="compareButton" class="btn btn-compare btn-success pull-right btn-date">{translate label="ID_DASH_COMPARE"}</button>
+								</div>
+							</div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="collapse" id="collapseExample">
+                          <div class="well">
+                            <p id="dashboardMessage" class="text-center">{translate label="ID_DASH_CLICK_TO_VIEW"}</p>
+                            <p>
+                                <!-- Split button -->
+                              <div id="dashboardsList">
+                              </div>
+                            </p>
+                            <div class="clearfix"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+          <!-- Indicators -->
+          <div class="row" id="indicatorsView">
+              <div class="indicators">
+                <div id="indicatorsGridStack" class="grid-stack" data-gs-width="12" data-gs-animate="no" >
+                  <!--Here are added dynamically the Indicators-->
+                </div>
+              </div>
+            <!-- Details by Indicator -->
+              <div class="col-lg-12 col-md-12 bottom">
+                  <div id="indicatorsDataGridStack" class="grid-stack" data-gs-width="12" data-gs-animate="no" >
+                  <!--Here are added dynamically the Dat by indicator-->
+                  </div>
+              </div>
+
+			  <div id="relatedLabel" class="col-lg-12 col-md-12 bottom" style="clear:both; visibility:hidden;">
+					<div>
+						<center><h3></h3></center>
+					</div>
+					<div id="sortby">
+						{translate label="ID_SORT_BY"} {translate label="ID_COSTS"} : &nbsp; <a id="sortListButton" class="fa fa-arrow-up fa-1x" style="color:#000;" href="#"></a>
+					</div>
+			  </div>
+
+              <div class="col-lg-12 col-md-12">
+				  <div id="relatedDetailGridStack" class="grid-stack" data-gs-width="12" 
+							data-gs-animate="no" style="clear:both;">
+                   </div>
+              </div>
+            </div>
+
+			<div class="process-div" id="compareDiv">
+				<div class="row">
+					<div class="col-lg-12 col-md-12">
+						<div class="panel-heading">
+							<ol id="comparisonBreadcrumb" class="breadcrumb">
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div id="compareGraph" style="padding:0 50px 0 50px;">
+					</div>
+				</div>
+			</div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+
