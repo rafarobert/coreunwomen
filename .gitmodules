@@ -1,0 +1,9 @@
+[submodule "workflow/engine/plugins/unwomen"]
+	path = workflow/engine/plugins/unwomen
+	url = https://rafarobert@github.com/rafarobert/unwomen.git
+[submodule "workflow/engine/plugin"]
+	path = workflow/engine/plugin
+	url = https://rafarobert@github.com/rafarobert/unwomen.git
+[submodule "workflow/engine/plugins"]
+	path = workflow/engine/plugins
+	url = https://rafarobert@github.com/rafarobert/unwomen.git
